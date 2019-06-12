@@ -4,9 +4,17 @@
   "description": "Import Changyan data to Valine (LeanCloud)",
   "main": "index.js",
   "scripts": {
+    "import": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["changyan", "valine", "leancloud"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhanghuanchong/changyan-to-valine.git"
+  },
   "author": "devwingcom@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.0.0"
+  }
 }
