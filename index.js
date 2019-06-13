@@ -30,11 +30,6 @@ const comments = _.sortBy(content.comments, ['ctime', 'id']);
 
 async function importData () {
   for (const comment of comments) {
-    const url = new URL(comment.topicUrl);
-    if (url.hostname.endsWith('.local')) {
-      continue;
-    }
-
     let nick = comment.nickname;
     if (!nick || nick === '有课') {
       nick = `佚名`;
@@ -68,14 +63,14 @@ async function importData () {
       comment.userProfileUrl = 'https://icon.wuruihong.com';
     }
 
-    let content = comment.content || '';
-
     let mail = comment.mail || '';
     if (!mail && comment.ip) {
       mail = `${comment.ip}@unknown.com`;
     }
 
-    const parent = imported[comment.replyId]
+    const parent = imported[comment.replyId];
+    const url = new URL(comment.topicUrl);
+    let content = comment.content || '';
 
     const data = {
       nick,
