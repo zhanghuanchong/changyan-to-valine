@@ -7,7 +7,11 @@
     "import": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["changyan", "valine", "leancloud"],
+  "keywords": [
+    "changyan",
+    "valine",
+    "leancloud"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/zhanghuanchong/changyan-to-valine.git"
@@ -15,6 +19,9 @@
   "author": "devwingcom@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.0.0"
+    "axios": "^0.19.0",
+    "dotenv": "^8.0.0",
+    "leancloud-storage": "^3.13.2",
+    "lodash": "^4.17.11"
   }
 }

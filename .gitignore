@@ -63,4 +63,5 @@ typings/
 .next
 
 /.idea/workspace.xml
+data.json
 
